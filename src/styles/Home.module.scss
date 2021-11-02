@@ -91,12 +91,14 @@
             }
 
             .createNew {
+                cursor: pointer;
                 margin-top: 1em;
                 background-color: var(--button-green);
                 color: #FFF;
                 font-weight: bold;
                 padding: 1em;
                 border-radius: 5px;
+                border: none;
             }
 
             .pageText {

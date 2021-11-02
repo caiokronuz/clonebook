@@ -1,0 +1,187 @@
+.modal {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 99;
+
+    .modalFrame {
+        background-color: #FFF;
+        width: 70%;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+        padding: 0.6em;
+
+        .modalFrameTop {
+            display: flex;
+            justify-content: space-between;
+            padding: 1em 1em 0 1em;
+
+            div {
+                h1 {
+                    font-size: 1.8em;
+                    font-weight: bold;
+                }
+
+                p {
+                    color: rgba(0, 0, 0, 0.6);
+                }
+            }
+
+            span {
+                cursor: pointer;
+                color: rgba(0, 0, 0, 0.6);
+                font-weight: bold;
+                font-size: 1.2em;
+            }
+        }
+
+        .modalFrameForm {
+
+            padding: 0.5em;
+
+            input {
+                background: var(--grey-background);
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+                padding: 0.8em;
+            }
+
+            .inputName {
+                display: flex;
+                width: 100%;
+
+                input {
+                    margin-right: 0.8em;
+                    width: 50%;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            .infoInput {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    margin-top: 0.8em;
+
+                    &:last-child {
+                        margin-bottom: 0.8em;
+                    }
+                }
+            }
+
+            .selectInput {
+                width: 100%;
+                margin-bottom: 0.5em;
+
+                div {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    select {
+                        width: 30%;
+                        padding: 0.5em;
+                        border: 1px solid rgba(0, 0, 0, 0.2);
+                        border-radius: 5px;
+                        font-size: 1.02em;
+                    }
+                }
+            }
+
+            .selectInput,
+            .genInput {
+                label {
+                    color: rgba(0, 0, 0, 0.6);
+                    font-size: 0.85em;
+                }
+            }
+
+            .genInput {
+                width: 100%;
+
+                .radioDiv {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 0.5em;
+
+                    div {
+                        border: 1px solid rgba(0, 0, 0, 0.2);
+                        padding: 0.5em;
+                        border-radius: 5px;
+                        width: 25%;
+
+                        label {
+                            font-size: 1.02em;
+                            color: #000;
+                        }
+                    }
+                }
+            }
+
+            .customInput {
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+
+                select {
+                    width: 100%;
+                    padding: 0.5em;
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+                    border-radius: 5px;
+                }
+
+                span {
+                    font-size: 0.95em;
+                    color: rgba(0, 0, 0, 0.5);
+                    margin: 0.3em 0 0.3em 0;
+                }
+            }
+
+            .signUpButton {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                button {
+                    background-color: var(--button-green);
+                    border: none;
+                    border-radius: 5px;
+                    padding: 0.5em;
+                    width: 40%;
+
+                    color: #FFF;
+                    font-weight: bold;
+                    font-size: 1.1em;
+
+                    margin-top: 0.8em;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 1025px) {
+    .modal {
+        .modalFrame {
+            width: 30%;
+        }
+    }
+}

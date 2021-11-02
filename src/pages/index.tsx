@@ -1,13 +1,22 @@
+import {useState, FormEvent} from 'react';
 import type { NextPage } from 'next'
 import Head from 'next/head';
-import { FormEvent } from 'react';
+
+import { RegisterModal } from '../components/RegisterModal';
 
 import styles from '../styles/Home.module.scss';
 
 const Home: NextPage = () => {
+
+  const [isRegisterOn, setIsRegisterOn] = useState(false);
+
   function handleLogin(e: FormEvent) {
     e.preventDefault();
     alert("Clicou!")
+  }
+
+  function toggleRegisterModal(){
+    setIsRegisterOn(!isRegisterOn)
   }
 
 
@@ -17,6 +26,9 @@ const Home: NextPage = () => {
         <title>Clonebook - Log in or Sign in</title>
       </Head>
       <div className={styles.loginPage}>
+
+        {isRegisterOn ? <RegisterModal close={toggleRegisterModal}/> : ""}
+
         <main className={styles.frameLogin}>
 
           <div className={styles.logo}>
@@ -32,7 +44,7 @@ const Home: NextPage = () => {
             </form>
             <a href="#">Forgot password?</a>
             <hr />
-            <a href="#" className={styles.createNew}>Create new acccount</a>
+            <button className={styles.createNew} onClick={toggleRegisterModal}>Create new acccount</button>
             <p className={styles.pageText}>
               <a href="#">Create a page</a> for a celebrity, brand or business.
             </p>
