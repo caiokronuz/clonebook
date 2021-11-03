@@ -1,5 +1,6 @@
 import {useState, FormEvent} from 'react';
 import type { NextPage } from 'next'
+import Link from 'next/link';
 import Head from 'next/head';
 
 import { RegisterModal } from '../components/RegisterModal';
@@ -42,7 +43,7 @@ const Home: NextPage = () => {
               <input type="password" placeholder="Password" />
               <button type="submit">Log in</button>
             </form>
-            <a href="#">Forgot password?</a>
+            <Link href="/forgot">Forgot password?</Link>
             <hr />
             <button className={styles.createNew} onClick={toggleRegisterModal}>Create new acccount</button>
             <p className={styles.pageText}>
