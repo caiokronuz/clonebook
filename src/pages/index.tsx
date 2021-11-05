@@ -47,7 +47,7 @@ const Home: NextPage = () => {
             <hr />
             <button className={styles.createNew} onClick={toggleRegisterModal}>Create new acccount</button>
             <p className={styles.pageText}>
-              <a href="#">Create a page</a> for a celebrity, brand or business.
+              <Link href="/createapage">Create a page</Link> for a celebrity, brand or business.
             </p>
           </div>
 
